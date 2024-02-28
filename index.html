@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8fc67f6c06.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    
+    <!-- tailwind+daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Open Jokes</title>
+</head>
+<body>
+    <div class="container p-4">
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+            
+            <div class="card-body flex flex-col items-center justify-center">
+              <div class="border-4 rounded-lg border-green-700 w-3/4 bg-red-700 text-yellow-50 text-center p-4" id="jokes-container">
+                random jokes
+              </div>
+              <div class="justify-center">
+                <button class="btn btn-warning text-white" id="btn-jokes" onclick="generateJokes()">Get Jokes</button>
+              </div>
+            </div>
+            <figure><img src="image/simlee.jpg" class="rounded-xl" alt="Album"/></figure>
+        </div>
+    
+    <div class="space-y-4">
+        <h2 class="text-2xl text-center bg-gray-800 p-2  text-white">Select Tags:  </h2>
+        <div class="grid grid-cols-3 md:grid-cols-6 bg-slate-300 p-2">
+            
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox" class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this,'Programming' )" /> Programming </div>
+            <!-- <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox" class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this, 'Programming')" /> Programming</div> -->
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this, 'Miscellaneous')" /> Misc </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this, 'Dark')" /> Dark </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this, 'Pun')" /> Pun </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-red-700" onclick="AddTag(this, 'Spooky')" /> Spooky </div>
+        </div>
+
+        <h2 class="text-2xl text-center bg-gray-800 p-2  text-white">Select FLags to Blacklist: </h2>
+        <div class="grid grid-cols-3 md:grid-cols-6 bg-slate-300 p-2">
+            
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> nsfw </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Religious </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Political </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Racist </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Sexist </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Explicit </div>
+        </div>
+
+        <h3 class="text-2xl text-center bg-gray-800  p-2 text-white">Search for a joke that contains this search string:</h3>
+        <div class="flex justify-center items-center bg-slate-300 p-2">
+            <div class="join">
+                <input class="input  join-item rounded-xl" placeholder="Keyword"/>
+                <button class="btn join-item rounded-xl border-none outline-none px-8">Add</button>
+              </div>            
+        </div>
+    </div>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
