@@ -2,9 +2,11 @@
 let tags = '';
 let f=0;
 let blockedText='';
+let searchString ='';
 
 const createJokes = async(tags)=>{
-    const url = `https://v2.jokeapi.dev/joke/${tags}${blockedText=="?blacklistFlags=" ? "":blockedText}`;
+    console.log(searchString);
+    const url = `https://v2.jokeapi.dev/joke/${tags}${blockedText=="?blacklistFlags=" ? "":blockedText}${searchString}`;
     console.log(url);
     const res = await fetch(url);
     const data =await res.json();
@@ -103,5 +105,17 @@ const blockTags = (checkbox, tag)=>{
     
     console.log(blockedText);
     
-    
 }
+
+
+const addStringToLink = ()=>{
+    // console.log("String adding");
+    const input = document.getElementById('input-field');
+    const inputtext = input.value ;
+    // console.log(inputtext);
+    
+    searchString=inputtext;
+}
+
+
+
