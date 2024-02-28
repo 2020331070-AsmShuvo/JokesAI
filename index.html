@@ -43,12 +43,12 @@
         <h2 class="text-2xl text-center bg-gray-800 p-2  text-white">Select FLags to Blacklist: </h2>
         <div class="grid grid-cols-3 md:grid-cols-6 bg-slate-300 p-2">
             
-            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> nsfw </div>
-            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Religious </div>
-            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Political </div>
-            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Racist </div>
-            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Sexist </div>
-            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" /> Explicit </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'nsfw' )" /> nsfw </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'Religious' )" /> Religious </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'Political' )" /> Political </div>
+            <div class="flex flex-row items-center justify-center gap-1"> <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'Racist' )" /> Racist </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'Sexist' )" /> Sexist </div>
+            <div class="flex flex-row items-center justify-center gap-1">  <input type="checkbox"  " class="checkbox checkbox-xs bg-blue-700" onclick="blockTags(this,'Explicit' )" /> Explicit </div>
         </div>
 
         <h3 class="text-2xl text-center bg-gray-800  p-2 text-white">Search for a joke that contains this search string:</h3>
