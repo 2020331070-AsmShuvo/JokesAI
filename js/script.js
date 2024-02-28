@@ -40,39 +40,36 @@ const generateJokes = ()=>{
     else
         createJokes(tags);
 }
-// const tagsList = [];
 
-// const AddTag = (checkbox, tag) => {
-//     // console.log(checkbox.checked);
-//     if (tagsList.includes(tag)) {
-//         return;
-//     }
-
-//     if (checkbox.checked) {
-//         if (f) {
-//             tags += ',';
-//         } else {
-//             f++;
-//         }
-//         tags += tag;
-//         tagsList.push(tag);
-//     } 
-//     if(!checkbox.checked) {
-//         const index = tagsList.indexOf(tag);
-//         if (index !== -1) {
-//             tagsList.splice(index, 1); // Remove tag from tagsList array
-//         }
-//         // Update tags string by joining tagsList array
-//         tags = tagsList.join(',');
-//     }
-
-//     console.log(tags);
-//     // createJokes(tags);
-// };
+const tagsList = [];
+const AddTag = (checkbox, tag) => {
+    if (checkbox.checked) {
+        if(!tagsList.includes(tag)){
+            tagsList.push(tag);
+        }
+    } 
+    else{
+        if(tagsList.includes(tag)){
+            const index = tagsList.indexOf(tag);
+            if(index!== -1){
+                tagsList.splice(index,1);
+            }
+        }
+    }
+    if(tagsList.length>=0){
+        tags='';
+    }
+    for(let i=0; i<tagsList.length; i++){
+        tags+=tagsList[i];
+        if(i!=tagsList.length-1){
+            tags+=',';
+        }
+    }
+    console.log(tags);
+};
 
 
 const blockList = [];
-
 const blockTags = (checkbox, tag)=>{
 // https://v2.jokeapi.dev/joke/Any?blacklistFlags=religious,racist
     if(checkbox.checked){
